@@ -11,10 +11,10 @@ const About = () => {
     <div className='container mx-auto'>
       <div className='flex justify-around mx-5 flex-wrap '>
         <Image src={mugshot} alt="mugshot" width={400} height={300} className="rounded-full my-24 hover:scale-110 shadow-3xl transition ease-in-out delay-200 order-1 "></Image>
-            <div className='laptop:mt-28 sm:mt-3 order-2 flex flex-wrap flex-col mx-auto'>
+            <div className='laptop:mt-20 sm:mt-3 order-2 flex flex-wrap flex-col mx-auto'>
             <h2 className='text-3xl laptop:text-start xs:text-center font-bold pb-5'> About Me</h2>
             <pre className='text-l py-4 text-justify'>
-            {`Hey there, this is Sunil Band.\nI am a Front End Developer with a strong background\nin HTML, CSS, JavaScript, and modern web technologies\nlike React.js, Next.js, Bootstrap and Tailwind CSS.\nWith a keen eye for detail and a focus on delivering\nexceptional user experiences.I am passionate about \ncreating visually stunning and intuitive web \nexperiences. \nI am a lifelong learner, constantly seeking \nnew challenges and opportunities to grow\nas a developer.`
+            {`Hey there, this is Sunil Band.\nI am a Front End Developer with\na strong background in HTML, CSS,\nJavaScript, and modern web technologies\nlike React.js, Next.js, Bootstrap and\nTailwind CSS.With a keen eye for detail \nand a focus on delivering exceptional \nuser experiences.I am passionate about \ncreating visually stunning and intuitive\nweb experiences.\n \nI am a lifelong learner, constantly seeking \nnew challenges and opportunities to grow\nas a developer.`
             }</pre>
 
             <div className='button-collection flex space-x-4 py-6 laptop:mx-0 xs:mx-auto '>
