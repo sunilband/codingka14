@@ -8,10 +8,11 @@
   font-weight: 400;
   font-style: normal;
   }
-
+  /* #f1f5f9; */
 @layer base {
   body {
-    background-color: #f1f5f9;
+    background-color: #D8E9A8;
+    ;
     
   }
 }

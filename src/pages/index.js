@@ -10,7 +10,7 @@ export default function Home() {
 
 
   const [blogs, setBlogs] = useState([]);
-  const cardStyle='blog group w-96 py-5 my-7 mt-5 p-4 shadow-2xl rounded-2xl transition ease-in-out delay-150 bg-white hover:-translate-y-1 hover:scale-105 hover:bg-cyan-500 duration-200 hover:shadow-3xl'
+  const cardStyle='blog group w-96 py-5 my-7 mt-5 p-4 shadow-2xl rounded-2xl transition ease-in-out  bg-[#191A19] hover:-translate-y-1 hover:scale-105 hover:bg-[#30475E] duration-200 hover:shadow-3xl'
   
 
     useEffect(() => {
@@ -58,9 +58,9 @@ export default function Home() {
        return(
         
          <div className={cardStyle} key={blogitem.title}>
-        <Link href={`components/blogposts/${blogitem.slug}`} passHref><h2 className='cursor-pointer text-center text-2xl text-black group-hover:text-white transition ease-in-out delay-200 font-bold'>{blogitem.title}</h2>
+        <Link href={`components/blogposts/${blogitem.slug}`} passHref><h2 className='cursor-pointer text-center text-2xl text-white group-hover:text-white transition ease-in-out delay-200 font-bold'>{blogitem.title}</h2>
         <hr className='h-px my-2 bg-gray-200 border-0 dark:bg-gray-700  group-hover:bg-white transition ease-in-out delay-300 ' />
-          <p className='corsor-pointer  text-black font-semibold group-hover:text-white transition ease-in-out delay-400'>{blogitem.content.substr(0,140)}...</p>
+          <p className='corsor-pointer  text-white font-semibold group-hover:text-white transition ease-in-out delay-400'>{blogitem.content.substr(0,140)}...</p>
           </Link>
         </div>)
       })}
