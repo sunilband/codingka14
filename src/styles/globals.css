@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: 'zig';
   src: url('../pages/components/zigfont.ttf');

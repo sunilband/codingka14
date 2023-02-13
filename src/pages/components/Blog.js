@@ -1,19 +1,10 @@
 import {React,useEffect,useState} from 'react'
 import Link from "next/link";
 
-const Blog = () => {
-  const [blogs, setBlogs] = useState([]);
-
-    useEffect(() => {
-        console.log("useeffect is running");
-        fetch('http://localhost:3000/api/blogs').then((a) => {
-            return a.json();
-        })
-            .then((parsed) => {
-                
-                setBlogs(parsed)
-            })
-    }, [])
+const Blog = (props) => {
+  const [blogs, setBlogs] = useState(props.allBolgs);
+console.log(props)
+    
     // `./blogposts/${blogitem.slug}`
     const cardStyle='blog group w-96 py-5 my-7 mt-5 p-4 shadow-2xl rounded-2xl transition ease-in-out  bg-[#191A19] hover:-translate-y-1 hover:scale-105 hover:bg-[#30475E] duration-200 hover:shadow-3xl'
  
@@ -36,4 +27,11 @@ const Blog = () => {
      </div>) 
 }
 
+export async function getStaticProps(context) {
+      let data =await fetch('http://localhost:3000/api/blogs')
+      let allBolgs= await data.json()
+  return {
+    props: {allBolgs}, // will be passed to the page component as props
+  }
+}
 export default Blog
